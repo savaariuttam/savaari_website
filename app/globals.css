@@ -492,7 +492,7 @@ body {
   overflow: hidden;
   max-width: 35rem;
   height: 30rem;
-  margin: 200px auto;
+  
 }
 
 .wait {
@@ -597,3 +597,131 @@ body {
 
 
 }
+.main-footer {
+  border-top: 1px solid #e4e4e4;
+  background-color: #fdfdfd;
+}
+
+.main-footer .footer_widgets {
+  position: relative;
+  padding: 50px 0;
+}
+
+.main-footer a {
+  color: #919191;
+}
+
+.main-footer a:hover {
+  color: #ea2330;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+.social-list2 {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .justify-content-md-end {
+    justify-content: flex-end !important;
+  }
+}
+
+.social-list2 a {
+  width: 32px;
+  height: 32px;
+  line-height: 30px;
+  margin: 0 5px 5px 0;
+  color: #333333;
+  border: 1px solid #333333;
+  border-radius: 3px;
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+}
+
+.social-list2 a:hover {
+  color: #ea2330;
+  border: 1px solid #ea2330;
+}
+
+h4 {
+  font-size: 16px;
+}
+
+.help-num {
+  font-size: 22px;
+}
+
+.main-footer .more-info .content .trust span img {
+  height: 36px;
+}
+
+.main-footer .more-info {
+  background-color: #f7f7f7;
+  border-top: 1px solid #e4e4e4;
+  border-bottom: 1px solid #e4e4e4;
+  padding: 20px 0;
+}
+
+.listing-filter-bar {
+  border-bottom: 1px solid #e4e4e4;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  padding: 10px 0;
+}
+
+.flight-sec {
+  margin-top: 50px;
+}
+
+
+.dropdown-toggle::after {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 0.255em;
+  vertical-align: 0.255em;
+  content: "";
+  border-top: 0.3em solid;
+  border-right: 0.3em solid transparent;
+  border-bottom: 0;
+  border-left: 0.3em solid transparent;
+}
+.dropdown .dropdown-menu {
+  font-size: 1em;
+  padding: 0;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  border-radius: 4px;
+  box-shadow: 0px 2px 4px 1px rgba(0, 0, 0, 0.05);
+  min-width: 120px;
+  background-color: #fff;
+}
+.dropdown-item {
+  display: block;
+  width: 100%;
+  padding: 6px 20px;
+  clear: both;
+  font-weight: 400;
+  color: #212529;
+  text-align: inherit;
+  white-space: nowrap;
+  background-color: transparent;
+  border: 0;
+}
+.dropdown-item:hover{
+  background-color: #ebe8e8;
+  color: #085c79;
+}
+.dropdown-divider {
+  height: 0;
+  margin: 0.5rem 0;
+  overflow: hidden;
+  border-top: 1px solid #e9ecef;
+}
+
+
+

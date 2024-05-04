@@ -1,11 +1,21 @@
+"use client"
 import { GiCommercialAirplane } from "react-icons/gi";
 import { RiHotelLine } from "react-icons/ri";
 import { MdOutlinePolicy } from "react-icons/md";
-
-
-import React from 'react';
+import { useState } from "react";
+import Link from "next/link";
 
 const Header = () => {
+const [isOpen, setIsOpen] = useState(false);
+const [isOpen2, setIsOpen2] = useState(false);
+  const toggleDropdown = () => {
+    setIsOpen(!isOpen);
+    setIsOpen2(false);
+  };
+  const toggleDropdown2 = () => {
+    setIsOpen2(!isOpen2);
+    setIsOpen(false);
+  };
     return (
         <div className="main-header w-full">
             <div className="row">
@@ -56,18 +66,33 @@ const Header = () => {
                             </select>
                         </div>
                         <div className="links">
-                            <a href="{% url 'offer_details' %}">offers </a>
+                            <a href="">offers </a>
                         </div>
-                        <div className="dropdown ">
-                            <button className="dropdown-toggle" type="button" data-toggle="dropdown">
-                                <img src="{% static 'main/images/avatar/1.jpg' %}" alt="" />
+                        <div className="dropdown">
+                            <button className="dropdown-toggle" type="button" onClick={toggleDropdown}>
                                 <span>Account</span>
                             </button>
+                            {isOpen && (
+                                <div className="dropdown-menu" x-placement="bottom-start" style={{ position: 'absolute', transform: 'translate3d(0px, 21px, 0px)', top: '29px', willChange: 'transform' }}>
+                                <Link href="login" className="dropdown-item" >Login</Link>
+                                <Link href="login" className="dropdown-item">Sign Up</Link>
+                                <div className="dropdown-divider"></div>
+                                <Link href="" className="dropdown-item">For Business</Link>
+                                <Link href="" className="dropdown-item">For Agents</Link>
+                              </div>
+                            )}
                         </div>
-                        <div className="links">
-                            <a href="{% url 'offer_details' %}">Supports </a>
+                        <div className="dropdown">
+                            <button className="dropdown-toggle" type="button" onClick={toggleDropdown2}>
+                                <span>support</span>
+                            </button>
+                            {isOpen2 && (
+                                <div className="dropdown-menu" x-placement="bottom-start" style={{ position: 'absolute', transform: 'translate3d(0px, 21px, 0px)', top: '29px', willChange: 'transform' }}>
+                                <Link href="" className="dropdown-item" >Call Us</Link>
+                                <Link href="" className="dropdown-item">Mail Us</Link>
+                              </div>
+                            )}
                         </div>
-                        {/* Additional dropdowns go here */}
                     </div>
                 </div>
             </div>

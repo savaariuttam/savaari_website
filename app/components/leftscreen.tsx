@@ -87,7 +87,7 @@ function Leftscreen() {
                             <label className="custom-checkbox-radio">
                                 <input id="armed_box" type="checkbox" name="Special" value="MIL" />
                                 <span className="checkmark"></span>
-                                Armed Forces
+                                Armed Force
                             </label>
                         </li>
                         <li>

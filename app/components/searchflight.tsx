@@ -5,10 +5,9 @@ import SwitchButton from '../components/SwitchButton';
 const SearchFlight = ({ setResults }) => {
     const [inputDepartFrom, setInputDepartFrom] = useState("");
     const [inputDepartTo, setInputDepartTo] = useState("");
-    const [loading, setLoading] = useState(false); // Add loading state
-
+    const [loading, setLoading] = useState(false);
     const fetchData = (value, isDepartFrom) => {
-        setLoading(true); // Set loading to true before making the API call
+        setLoading(true);
 
         fetch("https://onlinesavaari.website/savaari_api/flight_code_list/")
             .then((response) => response.json())
@@ -27,7 +26,7 @@ const SearchFlight = ({ setResults }) => {
                 console.error("Error fetching data:", error);
             })
             .finally(() => {
-                setLoading(false); // Set loading to false after API call is complete
+                setLoading(false);
             });
     };
 
