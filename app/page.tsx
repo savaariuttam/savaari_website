@@ -5,6 +5,7 @@ import Rightscreen from "./components/rightscreen";
 import Header from "./components/header";
 import Loader from "./components/Loader";
 import Footer from "../app/details/Footer";
+import './components/css/homepage.css';
 export default function Home() {
   const [loading, setLoading] = useState(true);
 
