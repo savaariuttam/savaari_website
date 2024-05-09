@@ -1,11 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import PassangerDetails from "./passangerDetails";
 import RouteDetails from "./routeDetails";
-const FormButtom = ({ selectedType }) => {
+
+interface FormButtonProps {
+  selectedType: string;
+}
+
+const FormButton: React.FC<FormButtonProps> = ({ selectedType }) => {
   return (
     <div className="full-cancel">
       <div className="box-one">
-        {selectedType === "cancel_conplete_trip" && (
+        {selectedType === "cancel_complete_trip" && (
           <h3 className="full-cancel">Ticket Details</h3>
         )}
         {selectedType === "cancel_traveller" && (
@@ -25,4 +30,4 @@ const FormButtom = ({ selectedType }) => {
   );
 };
 
-export default FormButtom;
+export default FormButton;

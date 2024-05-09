@@ -1,5 +1,10 @@
 import React from "react";
-const Button = ({ value }) => {
+
+interface ButtonProps {
+  value: string; // Specify the type for the 'value' prop
+}
+
+const Button: React.FC<ButtonProps> = ({ value }) => {
   return (
     <>
       <button

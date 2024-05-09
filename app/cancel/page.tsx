@@ -1,5 +1,5 @@
 import MainPage from "./mainPage";
-import "../components/css/cancle.css";
+import "../components/css/cancel.css";
 export default function Home() {
   return (
     <>
