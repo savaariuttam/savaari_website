@@ -1,6 +1,15 @@
 import React from 'react';
 
-const Input = ({ label, type, name, placeholder, required, maxLength }) => (
+interface InputProps {
+    label: string;
+    type: string;
+    name: string;
+    placeholder?: string;
+    required?: boolean;
+    maxLength?: number;
+}
+
+const Input: React.FC<InputProps> = ({ label, type, name, placeholder, required, maxLength }) => (
     <div className="form-group">
         <label htmlFor={name}>{label}{required && <span style={{ color: 'red' }}>*</span>}</label>
         <input
