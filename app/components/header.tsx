@@ -74,6 +74,7 @@ const Header = () => {
                             </button>
                             {isOpen && (
                                 <div className="dropdown-menu" x-placement="bottom-start" style={{ position: 'absolute', transform: 'translate3d(0px, 21px, 0px)', top: '29px', willChange: 'transform' }}>
+                                    <Link href="profile" className="dropdown-item" >Profile</Link>
                                     <Link href="login" className="dropdown-item" >Login</Link>
                                     <Link href="login" className="dropdown-item">Sign Up</Link>
                                     <div className="dropdown-divider"></div>

@@ -1,0 +1,42 @@
+.box-one {
+    display: block;
+    color: #333333;
+    background-color: #ffffff;
+    border: 1px solid #f1f1f1;
+    border-radius: 6px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    overflow: hidden;
+}
+
+.left-sec .sidemenu li {
+    padding: 10px 15px;
+    display: block;
+    color: #ffffff;
+    background-color: #333333;
+    position: relative;
+}
+
+.dropdown-content li {
+    background-color: #f1f1f1 !important;
+}
+
+.dropdown-content li a {
+    color: black;
+}
+
+.breadcumb {
+    margin-bottom: 10px;
+}
+
+.breadcumb {
+    display: flex;
+    align-items: center;
+}
+
+.breadcumb li:after {
+    content: "/";
+    display: inline-block;
+    padding: 0 5px;
+    color: #999999;
+}
