@@ -1,15 +1,16 @@
 import React from 'react'
-import ProfileRight from './ProfileRight'
-import ProfileLeft from './ProfileLeft'
-import "../components/css/profile.css"
+import ProfileLeft from '../profile/ProfileLeft'
+import '../components/css/savaaricash.css'
+import SavaariCashSummary from './SavaariCashSummary'
+import Transaction from './Transaction'
 const page = () => {
     return (
         <>
-
             <div className='flex flex-col sm:flex-col lg:flex-row w-screen'>
                 <ProfileLeft />
-                <ProfileRight />
+                <SavaariCashSummary />
             </div>
+
         </>
     )
 }

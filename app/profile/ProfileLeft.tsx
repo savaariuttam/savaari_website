@@ -6,14 +6,14 @@ const ProfileLeft = () => {
     return (
 
 
-        <div className="lg:w-1/4 md:w-2/3 pr-4 pl-4 w-full left-sec">
+        <div className="lg:w-1/4 md:w-2/3 pr-4 pl-4 w-1/5 left-sec ml-48">
             <div className="w-full pr-8 pl-8">
                 <ul className="breadcumb">
                     <li><a href="/dashboard">Dashboard</a></li>
                     <li><span>Your Profile</span></li>
                 </ul>
             </div>
-            <ul className='sidemenu w-56 float-end'>
+            <ul className='sidemenu w-56'>
                 <li>
                     dashboard
                 </li>
