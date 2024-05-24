@@ -38,4 +38,4 @@ const WalletTable = () => {
     )
 }
 
-export default WalletTable
+export default WalletTable;
