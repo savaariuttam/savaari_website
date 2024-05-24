@@ -27,15 +27,14 @@ body {
   overflow: hidden;
 }
 
-.left-box {
+ .left-box {
   height: calc(100vh - 120px);
-  width: 55%;
   margin-top: 30px;
   margin-left: 33%;
   position: sticky;
   top: 100px;
   overflow-y: auto;
-}
+}  
 
 .right-box {
   margin-top: 40px;

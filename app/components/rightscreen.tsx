@@ -4,7 +4,7 @@ import OwlCarousel2 from "./owl2";
 import InformationSection from "./infosec";
 function Rightscreen() {
     return (
-        <main className="right_main w-full md:w-1/2">
+       
             <div className="right-box">
                 <div className="first_img">
                     <img src="https://onlinesavaari.website/media/banner/sales_banners_twT4tCR_jdnKBFj.jpg" alt="" />
@@ -27,7 +27,7 @@ function Rightscreen() {
                 <InformationSection />
             </div>
 
-        </main >
+        
 
     )
 }
