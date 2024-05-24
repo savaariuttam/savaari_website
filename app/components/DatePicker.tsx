@@ -4,39 +4,43 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const DateDiv = () => {
     const currentDate = new Date();
-    const [selectedDate, setSelectedDate] = useState(currentDate);
+    const [departureDate, setDepartureDate] = useState(currentDate);
+    const [returnDate, setReturnDate] = useState(null);
 
-    const handleDateChange = (date) => {
-        // Handle the date change here if needed
-        setSelectedDate(date);
+    const handleDepartureDateChange = (date) => {
+        setDepartureDate(date);
+    };
+
+    const handleReturnDateChange = (date) => {
+        setReturnDate(date);
     };
 
     return (
         <div id="dateDiv" className="flight-input">
             <div className="flight-group">
                 <label htmlFor="startDate">Departure Date</label>
-
-                {/* Use the DatePicker component */}
                 <DatePicker
-                    selected={selectedDate}
-                    onChange={handleDateChange}
+                    selected={departureDate}
+                    onChange={handleDepartureDateChange}
                     dateFormat="dd-MM-yyyy"
-                    className="datepicker hasDatepicker"
+                    className="datepicker"
                     id="startDate"
-                    name="travelDate"
-                    minDate={currentDate} // Set the minimum date to the current date
+                    name="departureDate"
+                    minDate={currentDate}
                 />
             </div>
-            <img id="calImg" src="/static/main/images/icon/calendar.png" alt="" />
 
             <div className="flight-group" id="returnGrp">
                 <label htmlFor="returnDate">Return Date</label>
-                <input
+                <DatePicker
+                    selected={returnDate}
+                    onChange={handleReturnDateChange}
+                    dateFormat="dd-MM-yyyy"
+                    className="datepicker"
                     id="returnDate"
-                    type="text"
-                    className="datepicker hasDatepicker"
-                    value=""
-                    name="travelDate1"
+                    name="returnDate"
+                    minDate={departureDate} 
+                    disabled={!departureDate} 
                 />
             </div>
         </div>

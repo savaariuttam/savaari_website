@@ -18,7 +18,7 @@ function Leftscreen() {
         }
     };
     return (
-            <div className="left-box max-w-96 min-w-32 box-one flex flex-row justify-center">
+            <div className="left-box min-w-80 box-one flex flex-row justify-center h-[calc(100vh-120px)] mt-[30px] ml-0 lg:ml-[170px] sm:ml-[0px] sticky top-[100px]">
                 <form>
                     <h4>Book Flights and Hotels</h4>
                     <ul className="trip-type-radio">
