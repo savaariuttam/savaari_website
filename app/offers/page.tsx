@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/header'
-import Footer from '../details/Footer'
+import Footer from '../components/Footer'
 import "../components/css/offers.css"
 import SavaariOffers from './SavaariOffers'
 

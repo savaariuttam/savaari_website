@@ -18,7 +18,7 @@ const Header = () => {
     };
     return (
         <div className="main-header">
-            <div className="flex flex-wrap justify-center items-center mx-24 sm:mx-[0] sm:gap-6 lg:gap-0">
+            <div className="flex justify-start items-center mx-24 sm:mx-[0] sm:gap-6 lg:gap-0">
                 <div className="sm:w-48 md:w-48 lg:w-1/3">
                     <div className="left-sec flex justify-center">
                         <div className="logo-widget">
