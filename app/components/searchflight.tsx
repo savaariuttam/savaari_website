@@ -41,10 +41,11 @@ const SearchFlight = ({ setResults }) => {
 
     return (
         <>
-            <div id="twoWay" className="flight-input mt-4">
-                <div className="flight-group">
-                    <label htmlFor="departFrom">Depart From</label>
+            <div id="twoWay" className="flight-input mt-4 flex justify-between gap-4">
+                <div className="flight-group border-b border-[#e4e4e4]">
+                    <label className="text-xs leading-4 mb-1 text-gray-400 inline-block max-w-full font-normal"htmlFor="departFrom">Depart From</label>
                     <input
+                     className="p-0 border-none text-xl font-semibold w-full"
                         name="fromCityOrAirport"
                         id="departFrom"
                         type="text"
@@ -53,14 +54,15 @@ const SearchFlight = ({ setResults }) => {
                         value={inputDepartFrom}
                         onChange={(e) => handleChange(e.target.value, true)}
                     />
-                    <p className="small m-0">Kolkata</p>
+                    <p className="small m-0 text-xs">Kolkata</p>
                 </div>
 
                 <SwitchButton />
 
-                <div className="flight-group">
-                    <label htmlFor="departTo">Going To</label>
+                <div className="flight-group border-b border-[#e4e4e4]">
+                    <label className="text-xs leading-4 mb-1 text-gray-400 inline-block max-w-full font-normal"htmlFor="departTo">Going To</label>
                     <input
+                     className="p-0 border-none text-xl font-semibold w-full"
                         name="toCityOrAirport"
                         id="departTo"
                         list="airport"
@@ -69,7 +71,7 @@ const SearchFlight = ({ setResults }) => {
                         value={inputDepartTo}
                         onChange={(e) => handleChange(e.target.value, false)}
                     />
-                    <p className="small m-0">Mumbai</p>
+                    <p className="small m-0 text-xs">Mumbai</p>
                 </div>
             </div>
 

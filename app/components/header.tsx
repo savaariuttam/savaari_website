@@ -4,7 +4,6 @@ import { RiHotelLine } from "react-icons/ri";
 import { MdOutlinePolicy } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
-import "../components/css/header.css"
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);

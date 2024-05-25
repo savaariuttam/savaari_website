@@ -72,7 +72,7 @@
 .left-box {
   top: 100px;
   overflow-y: auto;
-  width: 55%;
+  width: 70%;
 }  
 
 .box-one {
@@ -86,5 +86,35 @@
   overflow: hidden;
 }
 
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+input,
+textarea,
+select {
+  outline: none !important;
+  box-shadow: none !important;
+  text-shadow: none !important;
+}
+
+
+
+.flight-input .flight-group input {
+  padding: 0;
+  border: none;
+  font-size: 18px;
+  font-weight: 500;
+  width: 100%;
+}
 
 /* ...........................................DATE PICKER............................................................*/
+/* datepicker-custom.css */
+

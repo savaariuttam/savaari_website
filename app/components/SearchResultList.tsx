@@ -3,13 +3,12 @@ import React, { useState } from "react";
 
 const SearchResultList = ({ results, onResultClick }) => {
     return (
-        <div id="search-result">
+        <div id="search-result" className="w-full bg-white flex flex-col shadow-md rounded-md mt-4 max-h-36 overflow-y-auto">
             <ul>
                 {results.map((result, id) => (
-                    <li
+                    <li 
                         key={id}
-                        className="search-result-list"
-
+                        className="px-2 py-2 hover:bg-gray-300"
                     >
                         {result.name}
                     </li>
