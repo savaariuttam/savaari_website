@@ -315,11 +315,7 @@ label {
   gap: 20px;
 }
 
-a {
-  text-decoration: none;
-  transition: 0.3s;
-  color: #228ee9;
-}
+
 
 a:hover {
   color: #ea2330;

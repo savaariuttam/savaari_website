@@ -8,8 +8,7 @@ const SavaariOffers = () => {
     return (
         <>
             <OffersHeader />
-
-            <div className="offer-pg mx-8">
+            <div className="offer-pg lg:mx-40 md:mx-32">
                 <ul className="menu-list flex overflow-x-auto flex-nowrap">
                     {menuItems.map((item, index) => (
                         <li className="my-4" key={index}>

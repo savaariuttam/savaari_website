@@ -4,7 +4,7 @@ import ButtonComponent from "./Button";
 const MainDashboard = () => {
   return (
     <>
-      <section className="user-pg">
+      <section className="user-pg mt-20">
         <div className="container mx-auto sm:px-4">
           <div className="flex flex-wrap">
             <div className="w-full">

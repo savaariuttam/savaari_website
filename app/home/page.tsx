@@ -5,6 +5,7 @@ import Header from "../components/header";
 import Loader from "../components/Loader";
 import Footer from "../components/Footer";
 import '../components/css/homepage.css'
+
 import MainHome from "./Main";
 const Homepage = () => {
     const [loading, setLoading] = useState(true);

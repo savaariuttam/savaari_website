@@ -51,11 +51,7 @@
   color: red;
 }
 
-a {
-  text-decoration: none;
-  transition: 0.3s;
-  color: #228ee9;
-}
+
 
 .container {
   width: 100%;

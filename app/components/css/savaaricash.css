@@ -1,13 +1,4 @@
-.box-one {
-    display: block;
-    color: #333333;
-    background-color: #ffffff;
-    border: 1px solid #f1f1f1;
-    border-radius: 6px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
-    overflow: hidden;
-}
+
 
 .left-sec .sidemenu li {
     padding: 10px 15px;

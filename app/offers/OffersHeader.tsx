@@ -2,7 +2,7 @@ import React from 'react'
 
 const OffersHeader = () => {
     return (
-        <section className="heading-banner bg-center bg-cover text-center bg-green-900">
+        <section className="heading-banner bg-center bg-cover text-center bg-green-900 mt-24">
             <div className="container mx-auto sm:px-4">
                 <div className="flex flex-wrap">
                     <div className="w-full">

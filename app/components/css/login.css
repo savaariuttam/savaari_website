@@ -113,11 +113,6 @@ ul {
     text-align: center;
 }
 
-a {
-    text-decoration: none;
-    transition: 0.3s;
-    color: #228ee9;
-}
 
 .btn:not(:disabled):not(.disabled) {
     cursor: pointer;

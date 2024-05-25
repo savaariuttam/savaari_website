@@ -8,9 +8,9 @@ import SavaariOffers from './SavaariOffers'
 const page = () => {
     return (
         <>
-            {/* <Header /> */}
+            <Header /> 
             <SavaariOffers />
-            {/* <Footer /> */}
+           <Footer /> 
         </>
     )
 }

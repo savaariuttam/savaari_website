@@ -93,9 +93,9 @@ const OffersCard = () => {
     ];
 
     return (
-        <div className="flex flex-wrap mx-4">
+        <div className="flex flex-wrap lg:mx-40 md:mx-32">
             {OfferSec.map((offer) => (
-                <div key={offer.id} className="lg:w-1/4 md:w-1/3 w-full px-4 mb-6">
+                <div key={offer.id} className="lg:w-1/3 md:w-1/2 w-full px-4 mb-6 min-w-48">
                     <a href={offer.link} className="block text-gray-800 bg-white border border-gray-300 rounded-lg shadow-md overflow-hidden hotel-offer-one">
                         <div className="img-sec">
                             <img src={offer.img} alt={offer.title} className="w-full h-auto" />

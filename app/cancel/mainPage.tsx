@@ -2,7 +2,7 @@ import React from "react";
 import FormPage from "./formPage";
 const Mainapge = () => {
   return (
-    <section className="cancel-pg">
+    <section className="cancel-pg mt-28">
       <div className="container mx-auto sm:px-4">
         <div className="flex flex-wrap ">
           <div className="w-full">
