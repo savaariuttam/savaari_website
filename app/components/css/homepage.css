@@ -1,35 +1,4 @@
 
-.second_img img {
-  height: 130px;
-  width: 350px;
-}
-
-.second_img {
-  display: flex;
-  justify-content: space-around;
-}
-
-
-
- 
-.right-box {
-  margin-top: 40px;
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -72,6 +41,21 @@
   overflow: hidden;
   transition: height 300ms ease-in-out, opacity 300ms ease-in-out;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -61,7 +61,7 @@ const Header = () => {
                     </div>
                 </div>
                 <div className="sm:w-48 md:w-64 lg:w-1/3 pr-4 pl-4">
-                    <div className="right-sec flex justify-start gap-6">
+                    <div className="right-sec flex justify-start gap-2">
                         <div className="region-select">
                             <select id="country-select">
                                 <option data-icon="{% static 'main/images/flags/in.svg' %}">India</option>

@@ -1,22 +1,49 @@
 import React from 'react';
-
+import { GoArrowSwitch } from "react-icons/go";
 const InternationalFlight = () => {
+    const flights = [
+        {
+          id: 1,
+          from: "Delhi",
+          to: "Mumbai",
+          date: "15 Dec, 2023",
+          fare: 7899,
+          button: "Explore"
+        },
+        {
+          id: 2,
+          from: "Kolkata",
+          to: "Delhi",
+          date: "2 Jan, 2024",
+          fare: 899,
+          button: "Explore"
+        },
+        {
+          id: 3,
+          from: "Bengaluru",
+          to: "Kolkata",
+          date: "27 May, 2024",
+          fare: 2499,
+          button: "Explore"
+        }
+      ];
     return (
-        <div className="owl-item cloned pt-6" style={{ width: '166.667px', marginRight: '15px' }}>
-            <div className="item">
-                <form method="get" action="/flight/search_flight/">
-                    <div className="journey-box box-one">
-                        <div className="top-sec">
-                            <h4>Delhi<i className="la la-exchange mx-2"></i>London</h4>
-                        </div>
-                        <p className="time" id="dep_date">23 Jan, 2024</p>
-                        <div className="bottom-sec">
-                            <span>From $ <b><i className="la la-rupee"></i>12499</b></span>
-                        </div>
-                    </div>
-                </form>
+        <div className="flex flex-wrap justify-center gap-3">
+        {flights.map(flight => (
+          <div key={flight.id} className="border rounded-lg p-4 shadow-md w-48">
+            <div className="text-base font-semibold flex items-center">
+              <span>{flight.from}</span>
+              <span className="mx-2"><GoArrowSwitch /></span>
+              <span>{flight.to}</span>
             </div>
-        </div>
+            <div className="text-gray-600 mt-1">{flight.date}</div>
+            <div className="text-red-500 font-bold mt-2">₹ {flight.fare}</div>
+            <button className="bg-red-500 text-white font-semibold py-2 px-4 rounded mt-4 hover:bg-red-600">
+              {flight.button}
+            </button>
+          </div>
+        ))}
+      </div>
     );
 };
 
