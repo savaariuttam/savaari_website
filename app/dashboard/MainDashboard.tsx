@@ -8,7 +8,7 @@ const MainDashboard = () => {
         <div className="container mx-auto sm:px-4">
           <div className="flex flex-wrap">
             <div className="w-full">
-              <div className="title-sec pr-4 pl-4">
+              <div className="title-sec pr-4 pl-4 my-8">
                 <h3>My Dashboard</h3>
               </div>
             </div>

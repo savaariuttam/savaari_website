@@ -32,13 +32,13 @@ const DashboardBox: FC<DashboardBoxProps> = ({
 
   return (
     <div className="lg:w-1/4 pr-4 pl-4 md:w-1/2">
-      <div className="dashboard-box">
-        <div className="head-sec">
-          <h4 className="m-0">{headingname}</h4>
+      <div className="dashboard-box custom-bg border custom-border rounded-md shadow-sm overflow-hidden mb-8">
+        <div className="head-sec p-2.5 bg-[#333333] text-[#fff]">
+          <h4 className="m-0 font-normal">{headingname}</h4>
         </div>
-        <div className="body-sec ">
+        <div className="body-sec p-6 min-h-[240px]">
           <div
-            className="img-sec flex items-center justify-center"
+            className="img-sec text-center mb-8 flex items-center justify-center"
             style={{ fontSize: "60px", color: "#ea2330" }}
           >
             {iconContent}

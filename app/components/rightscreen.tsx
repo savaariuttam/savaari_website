@@ -4,7 +4,7 @@ import DomesticFlight from "./domesticflight";
 import InternationalFlight from "./internationalflight";
 function Rightscreen() {
     return (
-        <div className="right-box flex flex-col justify-start mt-[30px] ml-0 top-[100px] min-w-[80px]">
+        <div className="right-box flex flex-col justify-start mt-[30px] ml-0 top-[100px] min-w-[80px] mx-6">
             <section className="add-banner">
                 <div className="flex flex-wrap md:justify-center lg:justify-start">
                     <div className="w-5/6">
