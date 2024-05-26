@@ -5,7 +5,7 @@ const MainDashboard = () => {
   return (
     <>
       <section className="user-pg mt-20">
-        <div className="container mx-auto sm:px-4">
+        <div className="container mx-auto sm:px-4 px-4">
           <div className="flex flex-wrap">
             <div className="w-full">
               <div className="title-sec pr-4 pl-4 my-8">

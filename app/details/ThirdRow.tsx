@@ -38,7 +38,7 @@ const ThirdRow = () => {
     };
 
     return (
-        <div className="md:w-1/3">
+        <div className="sm:w-full md:w-full lg:w-full">
             <div className="person-select">
                 <label htmlFor="travelers">Traveller(s), Class</label>
                 <div className="add-person">

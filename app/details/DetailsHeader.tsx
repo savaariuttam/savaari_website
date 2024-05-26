@@ -11,9 +11,9 @@ import ListingFilterBar from "./ListingFilterBar"
 const DetailsHeader = () => {
     return (
         <>
-            <section className="listing-banner my-28" style={{ padding: '40px 0' }}>
-                <form method="GET" action="">
-                    <div className="flex flex-wrap">
+            <section className="listing-banner mt-24 py-6">
+                <form action="">
+                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
                         <FirstRow />
                         <SecondRow />
                         <ThirdRow />

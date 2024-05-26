@@ -2,7 +2,7 @@ import React from 'react';
 
 const FiveRow = () => {
     return (
-        <div className="md:w-1/3">
+        <div className="sm:w-full md:w-full lg:w-full">
             <ul className="filter-list space-y-2">
                 <li className="mb-2">
                     <label className="custom-checkbox flex items-center">
