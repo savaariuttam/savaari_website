@@ -5,13 +5,15 @@ import FlightListingBox from './FlightListingBox'
 const FlightListing = () => {
     return (
         <>
-            <div className="main-container">
-                <div className="flight-sec flex gap-8">
-                    <div id="flight-list" className="flex-1">
+            <div className="main_container">
+                <div className="flight-sec gap-8 grid grid-cols-1 sm:grid-cols-12">
+                    <div className="sm:col-span-2">
+                        <OfferSec />
+                    </div>
+                    <div id="flight-list" className="sm:col-span-10">
                         <FlightFilter />
                         <FlightListingBox />
                     </div>
-                    <OfferSec />
                 </div>
             </div>
         </>

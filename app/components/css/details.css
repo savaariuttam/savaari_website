@@ -46,6 +46,46 @@ section {
   }
 }
 
+
+
+
+.main_container {
+  margin-left: 200px;
+  margin-right: 200px;
+}
+
+@media screen and (max-width: 1319px) {
+  .main_container {
+    margin-left: 150px;
+    margin-right: 150px;
+  }
+}
+
+@media screen and (max-width: 1160px) {
+  .main_container {
+    margin-left: 100px;
+    margin-right: 100px;
+  }
+}
+
+@media screen and (max-width: 955px) {
+  .main_container {
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .flight-input {
   display: flex;
   align-items: flex-end;

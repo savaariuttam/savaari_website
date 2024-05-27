@@ -3,7 +3,7 @@ import React from 'react';
 const OfferSec = () => {
     return (
         <>
-            <div className="offer-sec w-40">
+            <div className="offer-sec w-full">
                 <div className="box-one listing-promo">
                     <div className="title-sec">
                         <h4>Today's Offer</h4>
