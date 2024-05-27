@@ -11,7 +11,7 @@ import ListingFilterBar from "./ListingFilterBar"
 const DetailsHeader = () => {
     return (
         <>
-            <section className="listing-banner mt-24 py-6">
+            <section className="listing-banner mt-24 py-6 w-full text-white">
                 <form action="">
                     <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
                         <FirstRow />
