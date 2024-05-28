@@ -41,7 +41,7 @@ const ThirdRow = () => {
         <div className="sm:w-full md:w-full lg:w-full">
             <div className="person-select">
                 <label htmlFor="travelers">Traveller(s), Class</label>
-                <div className="add-person">
+                <div className="add-person flex justify-between">
                     <div className="person-box">
                         <div className="quantity-box">
                             <button type="button" className="sub adult-sub" onClick={() => handleDecrement('adult')}>-</button>

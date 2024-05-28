@@ -11,15 +11,10 @@ const FormPage = () => {
   return (
     <>
       <form id="form_submit">
-        <input
-          type="hidden"
-          name="csrfmiddlewaretoken"
-          value="VfKniBkrl7E0yvW8I0Rk56pLO2UpuI5M1NzQISHd03jEbSuFjO0JZ6mEcxX3pUAS"
-        />
         <h4>Cancellation request</h4>
-        <ul className="trip-type-radio">
-          <li>
-            <label className="text-radio">
+        <ul className="trip-type-radio flex gap-4">
+          <li className="rounded-md border border-black">
+            <label className="text-radio inline-block text-base leading-none capitalize text-center px-2.5 py-2 relative cursor-pointer select-none">
               <input
                 id="one-way"
                 type="radio"
@@ -28,12 +23,12 @@ const FormPage = () => {
                 checked={selectedType === "cancel_conplete_trip"}
                 onChange={handleTypeChange}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark checkmark absolute top-0 left-0 h-full w-full border-none"></span>
               <span className="trip-label">Cancel Complete trip</span>
             </label>
           </li>
-          <li>
-            <label className="text-radio">
+          <li className="rounded-md border border-black">
+            <label className="text-radio inline-block text-base leading-none capitalize text-center px-2.5 py-2 relative cursor-pointer select-none">
               <input
                 id="round-trip"
                 type="radio"
@@ -42,12 +37,12 @@ const FormPage = () => {
                 checked={selectedType === "cancel_traveller"}
                 onChange={handleTypeChange}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark checkmark absolute top-0 left-0 h-full w-full border-none"></span>
               <span className="trip-label">Cancel Traveller</span>
             </label>
           </li>
-          <li>
-            <label className="text-radio">
+          <li className="rounded-md border border-black">
+            <label className="text-radio inline-block text-base leading-none capitalize text-center px-2.5 py-2 relative cursor-pointer select-none">
               <input
                 id="multi-city"
                 type="radio"
@@ -56,7 +51,7 @@ const FormPage = () => {
                 checked={selectedType === "cancel_route"}
                 onChange={handleTypeChange}
               />
-              <span className="checkmark"></span>
+              <span className="checkmark absolute top-0 left-0 h-full w-full border-none"></span>
               <span className="trip-label">Cancel Route</span>
             </label>
           </li>

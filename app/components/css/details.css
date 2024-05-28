@@ -122,10 +122,7 @@ label {
   width: 90%;
 }
 
-.add-person {
-  display: flex;
-  justify-content: space-between;
-}
+
 
 .person-box {
   width: 30%;
