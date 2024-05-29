@@ -2,7 +2,7 @@
 import React, { useState } from "react";
 import SwitchButton from '../components/SwitchButton';
 
-const SearchFlight = ({ setResults }) => {
+const SearchFlight = ({ setResults}) => {
     const [inputDepartFrom, setInputDepartFrom] = useState("");
     const [inputDepartTo, setInputDepartTo] = useState("");
     const [loading, setLoading] = useState(false);
@@ -12,7 +12,7 @@ const SearchFlight = ({ setResults }) => {
         fetch("https://onlinesavaari.website/savaari_api/flight_code_list/")
             .then((response) => response.json())
             .then((json) => {
-                const results = json.filter((user) => {
+                const results = json.filter((user:any) => {
                     return (
                         value &&
                         user &&

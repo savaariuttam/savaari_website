@@ -1,6 +1,13 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ViewFares from './ViewFares';
 
 const FlightListingBox = () => {
+    const [openfares, setOpenfares] = useState(false);
+
+    const handleOpenFares = () => {
+        setOpenfares(prevState => !prevState);
+    };
+
     return (
         <>
             <div className="listing-box box-one">
@@ -16,7 +23,9 @@ const FlightListingBox = () => {
                         <div className="thirdd lg:col-span-3 sm:order-2 md:order-2 lg:order-3">
                             <div className="total-price flex items-center justify-end gap-1">
                                 <div><b>$ 4636</b></div>
-                                <button className="btn btn-red">View Fares</button>
+                                <button className="btn btn-red" onClick={handleOpenFares}>
+                                    {openfares ? 'Hide Fares' : 'View Fares'} 
+                                </button>
                             </div>
                         </div>
                         <div className="midd lg:col-span-7 sm:order-3 md:order-3 lg:order-2 md:w-[200%] sm:w-[190%] lg:w-full">
@@ -41,18 +50,17 @@ const FlightListingBox = () => {
                             </div>
                         </div>
                     </div>
-
-
-                    <hr></hr>
+                    <hr />
                     <div className="divider-sec pt-2">
                         <span className="m-0 cashback">YOU CAN BOOK THIS FLIGHT</span>
-                        <button className="cursor-pointer"><a href="javascript:void(0)">Flights details</a></button>
+                        <button className="cursor-pointer">
+                            <a href="javascript:void(0)">Flights details</a>
+                        </button>
                     </div>
                 </div>
+                {openfares && <ViewFares />}
             </div>
         </>
-
-
     );
 };
 

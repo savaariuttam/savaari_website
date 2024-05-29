@@ -12,9 +12,9 @@ const SwitchButton = () => {
     };
 
     return (
-        <button type="button" onClick={switchText}>
+        <button type="button"className='mr-10' onClick={switchText}>
 
-            <GoArrowSwitch style={{ width: '50px', height: '40px' }} />
+            <GoArrowSwitch style={{ width: '35px', height: '25px' }} />
 
         </button>
     );
