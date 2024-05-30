@@ -8,7 +8,6 @@ const ThirdRow = () => {
     const handlePersonChange = (type, action) => {
         const maxCount = 9;
         let newCount;
-
         switch (type) {
             case 'Adult':
                 newCount = action === 'sub' ? Math.max(1, adultCount - 1) : Math.min(maxCount, adultCount + 1);
@@ -33,7 +32,7 @@ const ThirdRow = () => {
         }
     };
     return (
-        <div className="sm:w-full md:w-full lg:w-full">
+        <div className="sm:w-full md:w-full lg:w-full w-full">
             <div className="person-select">
                 <label htmlFor="travelers">Traveller(s), Class</label>
                 <div className='flex justify-between'>

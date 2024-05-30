@@ -2,7 +2,7 @@ import React from 'react';
 
 const FourRow = () => {
     return (
-        <div className="sm:w-full md:w-full lg:w-full">
+        <div className="sm:w-full md:w-full lg:w-full w-full">
             <ul className="filter-list">
                 <li>
                     <label className="custom-radio flex items-center">

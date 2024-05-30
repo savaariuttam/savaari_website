@@ -12,7 +12,7 @@ const SecondRow = () => {
 
  
     return (
-        <div className="sm:w-full md:w-full lg:w-full">
+        <div className="sm:w-full md:w-full lg:w-full w-full">
             <div className="flight-input1">
                 <div className="flight-group1">
                     <label className="text-xs leading-4 mb-1 text-white inline-block max-w-full font-normal" htmlFor="startDate">Departure Date</label>

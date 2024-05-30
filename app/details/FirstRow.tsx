@@ -8,7 +8,7 @@ const FirstRow = () => {
     };
 
     return (
-        <div className="sm:w-full md:w-full lg:w-full">
+        <div className="sm:w-full md:w-full lg:w-full w-full">
             <div className="flight-input">
                 <div className="flight-group">
                     <label htmlFor="departFrom">Depart From</label>

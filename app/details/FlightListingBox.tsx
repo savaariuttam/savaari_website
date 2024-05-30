@@ -12,15 +12,15 @@ const FlightListingBox = () => {
         <>
             <div className="listing-box box-one">
                 <div className="basic-info">
-                    <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-12">
-                        <div className="firstt lg:col-span-2 sm:order-1 md:order-1 lg:order-1">
+                    <div className="grid sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-12 grid-cols-2">
+                        <div className="firstt lg:col-span-2 md:order-1 lg:order-1">
                             <div className="flight-name">
                                 <img src="https://onlinesavaari.website/static/flight/airline_logo/SG.png" alt="Air India Logo" />
                                 <div><b>Air India</b></div>
                                 <div className="small">AI-805</div>
                             </div>
                         </div>
-                        <div className="thirdd lg:col-span-3 sm:order-2 md:order-2 lg:order-3">
+                        <div className="thirdd lg:col-span-3 md:order-2 lg:order-3">
                             <div className="total-price flex items-center justify-end gap-1">
                                 <div><b>$ 4636</b></div>
                                 <button className="btn btn-red" onClick={handleOpenFares}>
@@ -28,7 +28,7 @@ const FlightListingBox = () => {
                                 </button>
                             </div>
                         </div>
-                        <div className="midd lg:col-span-7 sm:order-3 md:order-3 lg:order-2 md:w-[200%] sm:w-[190%] lg:w-full">
+                        <div className="midd lg:col-span-7 md:order-3 lg:order-2 md:w-[200%] sm:w-[190%] lg:w-full">
                             <div className="flight-time flex">
                                 <div className="time">
                                     <div><b>2024-02-10 20:10</b></div>
