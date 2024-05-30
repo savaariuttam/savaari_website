@@ -18,7 +18,7 @@ const ListingFilterBar = () => {
                         More Filters
                     </button>
                     <div className={`${openFilter ? "block" : "hidden"}`}>
-                    <MoreFilter handleClose={handleToggleFilter} />
+                        <MoreFilter handleClose={handleToggleFilter} />
                     </div>
                 </div>
             </div>
