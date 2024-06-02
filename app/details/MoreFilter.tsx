@@ -5,10 +5,11 @@ import { FaSun } from "react-icons/fa";
 import { PiSunHorizonFill } from "react-icons/pi";
 import { RiMoonClearFill } from "react-icons/ri";
 
-const MoreFilter = ({ handleClose }) => {
+const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
     const [price, setPrice] = useState(20000);
     const [selectedTimes, setSelectedTimes] = useState([]);
     const [selectedStops, setSelectedStops] = useState([]); 
+    
     const handlePriceChange = (e) => {
         setPrice(e.target.value);
     };
@@ -23,7 +24,6 @@ const MoreFilter = ({ handleClose }) => {
         });
     };
     
-
     const handleStopClick = (stop) => {
         if (selectedStops.includes(stop)) {
             setSelectedStops(selectedStops.filter((selectedStop) => selectedStop !== stop));
@@ -31,9 +31,16 @@ const MoreFilter = ({ handleClose }) => {
             setSelectedStops([...selectedStops, stop]);
         }
     };
+
+    const handleCheckboxChange = (e) => {
+        const { name, checked } = e.target;
+        handleAirlineSelection(name);
+        console.log(name)
+    };
+
     return (
-        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-center items-center z-50">
-            <div className="bg-white p-6 rounded-lg shadow-lg w-full max-w-lg">
+        <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-end z-50 h-full">
+            <div className="bg-white p-6 rounded-lg shadow-lg w-96 max-w-lg">
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-lg font-semibold">Filters</h2>
                     <button onClick={handleClose}>
@@ -115,7 +122,13 @@ const MoreFilter = ({ handleClose }) => {
                         <div className="space-y-1 mt-1">
                             {['Vistara', 'Air India', 'SpiceJet', 'AI Express', 'AirAsia India'].map((airline) => (
                                 <div key={airline} className="flex items-center">
-                                    <input type="checkbox" id={airline} className="mr-2" />
+                                    <input 
+                                        type="checkbox" 
+                                        id={airline} 
+                                        name={airline} 
+                                        className="mr-2" 
+                                        onChange={handleCheckboxChange}
+                                    />
                                     <label htmlFor={airline} className="text-sm text-gray-600">{airline}</label>
                                 </div>
                             ))}
@@ -124,7 +137,7 @@ const MoreFilter = ({ handleClose }) => {
                 </div>
                 <div className="mt-6 flex justify-between">
                     <button className="px-4 py-2 border rounded" onClick={handleClose}>Cancel</button>
-                    <button className="px-4 py-2 bg-red-500 text-white rounded">Apply Filter</button>
+                    <button className="px-4 py-2 bg-red-500 text-white rounded"onClick={handleClose}>Apply Filter</button>
                 </div>
             </div>
         </div>
