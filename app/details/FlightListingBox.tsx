@@ -1,8 +1,8 @@
-
 import React, { useState } from 'react';
 import ViewFares from './ViewFares';
 import MoreFilter from './MoreFilter';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+
 const flights = [
     {
         id: 1,
@@ -15,7 +15,7 @@ const flights = [
         arrivalTime: '2024-02-10 22:25',
         arrivalAirport: 'Chhatrapati Shivaji',
         duration: '2h 15m',
-        stops: '0Stop'
+        stops: '0 Stop'
     },
     {
         id: 2,
@@ -28,7 +28,7 @@ const flights = [
         arrivalTime: '2024-02-10 10:25',
         arrivalAirport: 'Chhatrapati Shivaji',
         duration: '2h 25m',
-        stops: '0Stop'
+        stops: '2 Stop'
     },
     {
         id: 3,
@@ -41,14 +41,30 @@ const flights = [
         arrivalTime: '2024-02-10 10:25',
         arrivalAirport: 'Chhatrapati Shivaji',
         duration: '2h 25m',
-        stops: '0Stop'
-    }
+        stops: '1 Stop'
+    },
+    {
+        id: 4,
+        airlineLogo: 'https://onlinesavaari.website/static/flight/airline_logo/I5.png',
+        airlineName: 'AirAsia India',
+        flightNumber: 'I5-768',
+        price: 8636,
+        departureTime: '2024-02-10 14:50',
+        departureAirport: 'Delhi Indira Gandhi Intl',
+        arrivalTime: '2024-02-10 22:25',
+        arrivalAirport: 'Chhatrapati Shivaji',
+        duration: '2h 15m',
+        stops: '0 Stop'
+    },
 ];
 
 const FlightListingBox = () => {
     const [openFaresId, setOpenFaresId] = useState(null);
     const [selectedAirlines, setSelectedAirlines] = useState([]);
+    const [selectedStops, setSelectedStops] = useState([]);
+    const [selectedTimes, setSelectedTimes] = useState([]);
     const [showMoreFilter, setShowMoreFilter] = useState(false);
+
     const handleOpenFares = (id) => {
         setOpenFaresId(prevState => (prevState === id ? null : id));
     };
@@ -61,24 +77,47 @@ const FlightListingBox = () => {
                 return [...prevSelectedAirlines, airline];
             }
         });
-        console.log("FlightListingBox", airline);
+    };
+
+    const handleStopSelection = (stops) => {
+        setSelectedStops(stops);
+    };
+
+    const handleTimeSelection = (times) => {
+        setSelectedTimes(times);
     };
 
     const removeSelectedAirline = (airline) => {
         setSelectedAirlines((prevSelectedAirlines) => prevSelectedAirlines.filter(a => a !== airline));
     };
+    const removeSelectedStops = (stops) => {
+        setSelectedStops((prevSelectedAirlines) => prevSelectedAirlines.filter(a => a !== stops));
+    };
+    const removeSelectedTimes = (times) => {
+        setSelectedTimes((prevSelectedAirlines) => prevSelectedAirlines.filter(a => a !== times));
+    };
 
-    const filteredFlights = flights.filter(flight =>
-        selectedAirlines.length === 0 || selectedAirlines.includes(flight.airlineName)
-    );
-    
+    const filteredFlights = flights.filter(flight => {
+        const stopCount = parseInt(flight.stops[0], 10);
+        const flightDepartureHour = new Date(flight.departureTime).getHours();
+        const isAirlineSelected = selectedAirlines.length === 0 || selectedAirlines.includes(flight.airlineName);
+        const isStopSelected = selectedStops.length === 0 || selectedStops.includes(stopCount);
+        const isTimeSelected = selectedTimes.length === 0 || selectedTimes.some(time => {
+            const [start, end] = time.split('-').map(Number);
+            if (end === 0) return flightDepartureHour >= start || flightDepartureHour < 6;
+            return flightDepartureHour >= start && flightDepartureHour < end;
+        });
+        return isAirlineSelected && isStopSelected && isTimeSelected;
+    });
 
     const handleClose = () => {
         setShowMoreFilter(false);
     };
+
     const handleOpenFilter = () => {
         setShowMoreFilter(true);
     };
+
     return (
         <>
             <div className="flex justify-between items-center mb-4">
@@ -94,12 +133,28 @@ const FlightListingBox = () => {
                                 </span>
                             ))}
                         </>
-                    )
-
-                    }
+                    )}
+                    {selectedStops.length > 0 && (
+                        <>
+                            {selectedStops.map((stops) => (
+                                <span key={stops} className="selected-airline">
+                                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedStops(stops)}>Stops: {stops} <IoMdCloseCircleOutline /></button>
+                                </span>
+                            ))}
+                        </>
+                    )}
+                    {selectedTimes.length > 0 && (
+                        <>
+                            {selectedTimes.map((times) => (
+                                <span key={times} className="selected-airline">
+                                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedTimes(times)}>Times: {times} <IoMdCloseCircleOutline /></button>
+                                </span>
+                            ))}
+                        </>
+                    )}
                 </div>
             </div>
-            {showMoreFilter && <MoreFilter handleAirlineSelection={handleAirlineSelection} handleClose={handleClose} />}
+            {showMoreFilter && <MoreFilter handleAirlineSelection={handleAirlineSelection} handleStopSelection={handleStopSelection} handleTimeSelection={handleTimeSelection} handleClose={handleClose} />}
 
             {filteredFlights.length > 0 ? (
                 filteredFlights.map(flight => (
@@ -164,29 +219,3 @@ const FlightListingBox = () => {
 };
 
 export default FlightListingBox;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

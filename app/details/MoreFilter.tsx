@@ -1,41 +1,40 @@
 import React, { useState } from 'react';
-import { AiOutlineClose, AiOutlineCheck } from "react-icons/ai";
-import { FaCloudSun } from "react-icons/fa6";
+import { AiOutlineClose } from "react-icons/ai";
+import { FaCloudSun } from "react-icons/fa";
 import { FaSun } from "react-icons/fa";
 import { PiSunHorizonFill } from "react-icons/pi";
 import { RiMoonClearFill } from "react-icons/ri";
 
-const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
+const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, handleTimeSelection }) => {
     const [price, setPrice] = useState(20000);
     const [selectedTimes, setSelectedTimes] = useState([]);
-    const [selectedStops, setSelectedStops] = useState([]); 
-    
+    const [selectedStops, setSelectedStops] = useState([]);
+
     const handlePriceChange = (e) => {
         setPrice(e.target.value);
     };
 
     const handleTimeClick = (time) => {
-        setSelectedTimes((prevSelectedTimes) => {
-            if (prevSelectedTimes.includes(time)) {
-                return prevSelectedTimes.filter(t => t !== time);
-            } else {
-                return [...prevSelectedTimes, time];
-            }
-        });
+        const updatedTimes = selectedTimes.includes(time)
+            ? selectedTimes.filter((selectedTime) => selectedTime !== time)
+            : [...selectedTimes, time];
+
+        setSelectedTimes(updatedTimes);
+        handleTimeSelection(updatedTimes);
     };
-    
+
     const handleStopClick = (stop) => {
-        if (selectedStops.includes(stop)) {
-            setSelectedStops(selectedStops.filter((selectedStop) => selectedStop !== stop));
-        } else {
-            setSelectedStops([...selectedStops, stop]);
-        }
+        const updatedStops = selectedStops.includes(stop)
+            ? selectedStops.filter((selectedStop) => selectedStop !== stop)
+            : [...selectedStops, stop];
+
+        setSelectedStops(updatedStops);
+        handleStopSelection(updatedStops);
     };
 
     const handleCheckboxChange = (e) => {
-        const { name, checked } = e.target;
+        const { name } = e.target;
         handleAirlineSelection(name);
-        console.log(name)
     };
 
     return (
@@ -84,7 +83,7 @@ const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
                     </div>
                     <div>
                         <label className="block text-sm font-medium text-gray-600">Depart Time:</label>
-                        <div className="flex space-x-2 mt-1">
+                        <div className="flex space-x-2 mt-1 w-full">
                             {['00-06', '06-12', '12-18', '18-00'].map((time) => {
                                 let iconClass;
                                 switch (time) {
@@ -107,7 +106,7 @@ const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
                                 return (
                                     <button
                                         key={time}
-                                        className={`border px-3 py-1 rounded flex items-center space-x-2 ${selectedTimes.includes(time) ? 'bg-red-500 text-white' : ''}`}
+                                        className={`border px-3 py-1 rounded flex flex-col items-center space-y-1 ${selectedTimes.includes(time) ? 'bg-red-500 text-white' : ''}`}
                                         onClick={() => handleTimeClick(time)}
                                     >
                                         {iconClass}
@@ -118,15 +117,15 @@ const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
                         </div>
                     </div>
                     <div>
-                        <label className="block text-sm font-medium">Airlines:</label>
+                        <label className="block text-sm font-medium text-gray-600">Airlines:</label>
                         <div className="space-y-1 mt-1">
                             {['Vistara', 'Air India', 'SpiceJet', 'AI Express', 'AirAsia India'].map((airline) => (
                                 <div key={airline} className="flex items-center">
-                                    <input 
-                                        type="checkbox" 
-                                        id={airline} 
-                                        name={airline} 
-                                        className="mr-2" 
+                                    <input
+                                        type="checkbox"
+                                        id={airline}
+                                        name={airline}
+                                        className="mr-2"
                                         onChange={handleCheckboxChange}
                                     />
                                     <label htmlFor={airline} className="text-sm text-gray-600">{airline}</label>
@@ -135,9 +134,9 @@ const MoreFilter = ({ handleClose, handleAirlineSelection }) => {
                         </div>
                     </div>
                 </div>
-                <div className="mt-6 flex justify-between">
-                    <button className="px-4 py-2 border rounded" onClick={handleClose}>Cancel</button>
-                    <button className="px-4 py-2 bg-red-500 text-white rounded"onClick={handleClose}>Apply Filter</button>
+                <div className="mt-20 flex justify-center">
+                    {/* <button className="px-4 py-2 border rounded" onClick={handleClose}>Cancel</button> */}
+                    <button className="px-4 py-2 w-96 bg-red-500 text-white rounded" onClick={handleClose}>Apply Filter</button>
                 </div>
             </div>
         </div>

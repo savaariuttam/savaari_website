@@ -428,3 +428,26 @@ a:hover {
 .react-datepicker-popper {
   margin-left: 60px;
 }
+
+
+
+
+
+
+
+
+
+
+/* const removeSelectedStops = (stops) => {
+  setSelectedStops((prevSelectedAirlines) => prevSelectedAirlines.filter(a => a !== stops));
+}; */
+
+/* {selectedStops.length > 0 && (
+  <>
+      {selectedStops.map((stops) => (
+          <span key={stops} className="selected-airline">
+              <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedStops(stops)}>Stops: {stops} <IoMdCloseCircleOutline /></button>
+          </span>
+      ))}
+  </>
+)} */
