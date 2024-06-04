@@ -4,10 +4,15 @@ import { RiHotelLine } from "react-icons/ri";
 import { MdOutlinePolicy } from "react-icons/md";
 import { useState } from "react";
 import Link from "next/link";
+import Logo from "./UI/Logo";
+import MidIcon from "./UI/MidIcon";
+
 
 const Header = () => {
     const [isOpen, setIsOpen] = useState(false);
     const [isOpen2, setIsOpen2] = useState(false);
+    const [activeIndex, setActiveIndex] = useState(0);
+    const [selectedCountry, setSelectedCountry] = useState('India');
     const toggleDropdown = () => {
         setIsOpen(!isOpen);
         setIsOpen2(false);
@@ -16,55 +21,62 @@ const Header = () => {
         setIsOpen2(!isOpen2);
         setIsOpen(false);
     };
+    const menuItems = [
+        { href: '#', icon: GiCommercialAirplane, label: 'Flights' },
+        { href: '#', icon: RiHotelLine, label: 'Hotels' },
+        { href: '#', icon: MdOutlinePolicy, label: 'Insurance' },
+    ];
+    const countryImages = {
+        India: 'https://flagicons.lipis.dev/flags/4x3/in.svg',
+        USA: 'https://flagicons.lipis.dev/flags/4x3/us.svg',
+        England: 'https://flagicons.lipis.dev/flags/4x3/gb-eng.svg',
+        Australia: 'https://flagicons.lipis.dev/flags/4x3/au.svg',
+        Bangladesh:'https://flagicons.lipis.dev/flags/4x3/bd.svg',
+    };
+    const handleItemClick = (index) => {
+        setActiveIndex(index);
+    };
+    const handleCountryChange = (event) => {
+        setSelectedCountry(event.target.value);
+    };
     return (
         <div className="main-header">
             <div className="flex justify-start items-center mx-24 sm:mx-[0] sm:gap-6 lg:gap-0">
                 <div className="sm:w-48 md:w-48 lg:w-1/3">
                     <div className="left-sec flex justify-center">
-                        <div className="logo-widget">
-                            <a href="{% url 'index'%}">
-                                <img className="max-w-full h-auto" src="https://onlinesavaari.website/static/main/images/logo.gif" alt="" style={{ height: "60px" }} />
-                            </a>
-                        </div>
+                        <Logo />
                     </div>
                 </div>
                 <div className="sm:w-48 md:w-64 lg:w-1/3 pr-4 pl-4">
                     <div className="center-sec">
                         <ul className="menu-items flex justify-center align-middle gap-8">
-                            <li>
-                                <a href="#" className="active flex flex-col items-center">
-                                    <GiCommercialAirplane className="text-3xl sm:text-[36px] icon-sm-screen" />
-                                    <span className="ml-2">Flights</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="flex flex-col items-center" href="">
-                                    <RiHotelLine className="text-3xl sm:text-[36px] icon-sm-screen" />
-                                    <span className="ml-2">Hotels</span>
-                                </a>
-                            </li>
-                            <li>
-                                <a className="flex flex-col items-center" href="">
-                                    <MdOutlinePolicy 
-                                    className="text-3xl sm:text-[36px] icon-sm-screen"
-                                    />
-                                    <span className="ml-2">Insurance</span>
-                                </a>
-                            </li>
-                            {/* <li>
-                                <a href="{% url 'visa'%}">
-                                    <img className="visa" src="https://i.pinimg.com/originals/0b/08/7c/0b087c9ad51a5c0a3afd57a05ebe4bee.png" alt="" style={{ height: "40px" }} />
-                                    <span>Visa</span>
-                                </a>
-                            </li>  */}
+                            {menuItems.map((item, index) => (
+                                <MidIcon
+                                    key={index}
+                                    href={item.href}
+                                    icon={item.icon}
+                                    label={item.label}
+                                    isActive={index === activeIndex}
+                                    onClick={() => handleItemClick(index)}
+                                />
+                            ))}
                         </ul>
                     </div>
                 </div>
                 <div className="sm:w-48 md:w-64 lg:w-1/3 pr-4 pl-4">
                     <div className="right-sec flex justify-start gap-2">
-                        <div className="region-select">
-                            <select id="country-select">
-                                <option data-icon="{% static 'main/images/flags/in.svg' %}">India</option>
+                        <div className="region-select flex justify-between gap-2">
+                            <img
+                                src={countryImages[selectedCountry]}
+                                alt={selectedCountry}
+                                style={{ height: '20px' }}
+                            />
+                            <select value={selectedCountry} onChange={handleCountryChange}>
+                                {Object.keys(countryImages).map((country) => (
+                                    <option key={country} value={country}>
+                                        {country}
+                                    </option>
+                                ))}
                             </select>
                         </div>
                         <div className="links">

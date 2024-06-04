@@ -1,5 +1,6 @@
 import React from 'react';
 import { GoArrowSwitch } from "react-icons/go";
+import  Button  from '../components/UI/Button';
 const InternationalFlight = () => {
     const flights = [
         {
@@ -8,7 +9,6 @@ const InternationalFlight = () => {
           to: "Mumbai",
           date: "15 Dec, 2023",
           fare: 7899,
-          button: "Explore"
         },
         {
           id: 2,
@@ -16,7 +16,6 @@ const InternationalFlight = () => {
           to: "Delhi",
           date: "2 Jan, 2024",
           fare: 899,
-          button: "Explore"
         },
         {
           id: 3,
@@ -24,7 +23,6 @@ const InternationalFlight = () => {
           to: "Kolkata",
           date: "27 May, 2024",
           fare: 2499,
-          button: "Explore"
         }
       ];
     return (
@@ -38,9 +36,7 @@ const InternationalFlight = () => {
             </div>
             <div className="text-gray-600 mt-1">{flight.date}</div>
             <div className="text-red-500 font-bold mt-2">₹ {flight.fare}</div>
-            <button className="bg-red-500 text-white font-semibold py-2 px-4 rounded mt-4 hover:bg-red-600">
-              {flight.button}
-            </button>
+            <Button href="" name="Explore"/>
           </div>
         ))}
       </div>

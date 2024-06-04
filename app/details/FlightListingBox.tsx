@@ -212,7 +212,7 @@ const FlightListingBox = () => {
                     </div>
                 ))
             ) : (
-                <div className="no-flights-text">No flights available based on selected filters.</div>
+                <div className="text-center font-bold text-red-600">No flights available based on selected filters.</div>
             )}
         </>
     );
