@@ -38,7 +38,7 @@ const DomesticFlight = () => {
           </div>
           <div className="text-gray-600 mt-1">{flight.date}</div>
           <div className="text-red-500 font-bold mt-2">₹ {flight.fare}</div>
-          <Button href="" name="Explore"/>
+          <Button href="" name="Explore" className='mt-2'/>
         </div>
       ))}
     </div>

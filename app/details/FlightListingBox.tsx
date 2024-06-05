@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import ViewFares from './ViewFares';
 import MoreFilter from './MoreFilter';
 import { IoMdCloseCircleOutline } from "react-icons/io";
+import ButtonWithCross from '../components/UI/ButtonWithCross';
 
 const flights = [
     {
@@ -129,7 +130,8 @@ const FlightListingBox = () => {
                         <>
                             {selectedAirlines.map((airline) => (
                                 <span key={airline} className="selected-airline">
-                                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedAirline(airline)}>{airline} <IoMdCloseCircleOutline /></button>
+                                    {/* <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedAirline(airline)}>{airline} <IoMdCloseCircleOutline /></button> */}
+                                <ButtonWithCross onClick={() => removeSelectedAirline(airline)} name={airline} />
                                 </span>
                             ))}
                         </>
@@ -138,7 +140,8 @@ const FlightListingBox = () => {
                         <>
                             {selectedStops.map((stops) => (
                                 <span key={stops} className="selected-airline">
-                                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedStops(stops)}>Stops: {stops} <IoMdCloseCircleOutline /></button>
+                                    {/* <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedStops(stops)}>Stops: {stops} <IoMdCloseCircleOutline /></button> */}
+                                    <ButtonWithCross onClick={() => removeSelectedStops(stops)} name= {stops} />
                                 </span>
                             ))}
                         </>
@@ -147,7 +150,8 @@ const FlightListingBox = () => {
                         <>
                             {selectedTimes.map((times) => (
                                 <span key={times} className="selected-airline">
-                                    <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedTimes(times)}>Times: {times} <IoMdCloseCircleOutline /></button>
+                                    {/* <button className="px-4 py-2 bg-blue-500 text-white rounded flex justify-center gap-1 items-center" onClick={() => removeSelectedTimes(times)}>Times: {times} <IoMdCloseCircleOutline /></button> */}
+                                    <ButtonWithCross onClick={() => removeSelectedTimes(times)} name={times} />
                                 </span>
                             ))}
                         </>

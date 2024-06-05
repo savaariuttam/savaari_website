@@ -66,7 +66,7 @@ function Leftscreen() {
                     ))}
                 </ul>
                 <div className="text-right mt-4">
-                    <Button href="/details" name="Search Flights" />
+                    <Button href="/details" name="Search Flights" className='mt-2'/>
                 </div>
 
             </form>

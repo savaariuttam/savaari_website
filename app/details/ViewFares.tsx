@@ -1,4 +1,5 @@
 
+import Button from '../components/UI/Button';
 import React from 'react';
 
 const ViewFares = () => {
@@ -30,7 +31,8 @@ const ViewFares = () => {
               <td className="px-6 py-4 border border-gray-300">Paid Meal</td>
               <td className="px-6 py-4 border border-gray-300">₹ 5178.5</td>
               <td className="px-6 py-4 border border-gray-300">
-                <button className="btn btn-red"><p className='text-sm'>Book Now</p></button>
+                {/* <button className="btn btn-red"><p className='text-sm'>Book Now</p></button> */}
+                <Button name="Book Now" href='' className=''/>
               </td>
             </tr>
           </tbody>
