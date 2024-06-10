@@ -1,5 +1,6 @@
 "use client"
 import { GiCommercialAirplane } from "react-icons/gi";
+import { GiAirplaneDeparture } from "react-icons/gi";
 import { RiHotelLine } from "react-icons/ri";
 import { MdOutlinePolicy } from "react-icons/md";
 import { useState } from "react";
@@ -22,7 +23,7 @@ const Header = () => {
         setIsOpen(false);
     };
     const menuItems = [
-        { href: '#', icon: GiCommercialAirplane, label: 'Flights' },
+        { href: '#', icon: GiAirplaneDeparture, label: 'Flights' },
         { href: '#', icon: RiHotelLine, label: 'Hotels' },
         { href: '#', icon: MdOutlinePolicy, label: 'Insurance' },
     ];
