@@ -18,7 +18,7 @@ const MainDashboard = () => {
               headingname="Modify Booking"
               imageSrc="ModifyBooking"
               litext1="Cancel"
-              litext2="Reschedule"
+              litext2="reschedule"
               litext3="All Bookings"
             />
             <DashboardBox

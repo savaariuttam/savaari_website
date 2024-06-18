@@ -8,6 +8,7 @@ import FiveRow from "./FiveRow";
 import SixRow from "./SixRow";
 import FlightListing from "./FlightList"
 import ListingFilterBar from "./ListingFilterBar"
+import ScrollToTopButton from "../components/UI/Scroll-To-Top-Buttom";
 const DetailsHeader = () => {
     return (
         <>
@@ -25,6 +26,7 @@ const DetailsHeader = () => {
             </section>
             <ListingFilterBar />
             <FlightListing />
+            <ScrollToTopButton />
         </>
     );
 };

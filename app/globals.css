@@ -114,6 +114,41 @@ select {
   font-weight: 500;
   width: 100%;
 }
+.btn-red {
+  color: #ffffff;
+  background-color: #ea2330;
+  border-color: #ea2330;
+}
 
-/* ...........................................DATE PICKER............................................................*/
+.btn {
+  font-size: 1em;
+  font-weight: 500;
+  line-height: 1.4;
+  border: 1px solid;
+  border-radius: 4px;
+  padding: 8px 15px;
+  box-shadow: none;
+  text-shadow: none;
+  outline: none;
+}
+/* ...........................................Reschedule............................................................*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

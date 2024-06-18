@@ -10,4 +10,4 @@ const ButtonWithCross = ({onClick,name}) => {
     )
 }
 
-export default ButtonWithCross
+export default ButtonWithCross;
