@@ -48,6 +48,7 @@ const PersonSelect = () => {
     };
 
     return (
+        // .................................................................person-select..........................................................
         <div className="person-select mt-6">
             <label className="text-sm" htmlFor="">Traveller(s), Class</label>
             <div className="accordion-two" id="accordiontraveller">

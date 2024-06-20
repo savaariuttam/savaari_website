@@ -41,13 +41,16 @@ const Header = () => {
         setSelectedCountry(event.target.value);
     };
     return (
+        // ..................................savaari header start.................................................
         <div className="main-header">
             <div className="flex justify-start items-center mx-24 sm:mx-[0] sm:gap-6 lg:gap-0">
+                {/* .........................logo sec ........................................................ */}
                 <div className="sm:w-48 md:w-48 lg:w-1/3">
                     <div className="left-sec flex justify-center">
                         <Logo />
                     </div>
                 </div>
+                 {/* .........................icon sec ........................................................ */}
                 <div className="sm:w-48 md:w-64 lg:w-1/3 pr-4 pl-4">
                     <div className="center-sec">
                         <ul className="menu-items flex justify-center align-middle gap-8">
@@ -64,6 +67,7 @@ const Header = () => {
                         </ul>
                     </div>
                 </div>
+                {/* .........................left header (dropdown) sec ........................................................ */}
                 <div className="sm:w-48 md:w-64 lg:w-1/3 pr-4 pl-4">
                     <div className="right-sec flex justify-start gap-2">
                         <div className="region-select flex justify-between gap-2">

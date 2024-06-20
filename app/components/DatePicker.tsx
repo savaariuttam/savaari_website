@@ -17,6 +17,7 @@ const DateDiv = ({ type }) => {
     };
 
     return (
+        // DatePicker for left screen home page 
         <div id="dateDiv" className="flight-input flex flex-row w-full ">
             <div className="flight-group w-1/2 border-b border-[#e4e4e4]">
                 <label className="text-xs leading-4 mb-1 text-gray-400 inline-block max-w-full font-normal" htmlFor="startDate">Departure Date</label>

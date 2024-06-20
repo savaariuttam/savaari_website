@@ -4,8 +4,9 @@ import Button from "./button";
 
 const RouteDetails = () => {
   return (
+    // .........................................................Route Details
     <div className="block w-full overflow-auto scrolling-touch">
-      <form action="/flight/cancel_booking/" method="POST">
+      <form>
         <table className="w-full max-w-full bg-transparent table-bordered table-hover table-striped table-checkable table-highlight-head mb-4">
           <tbody>
             <tr>

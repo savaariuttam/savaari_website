@@ -26,6 +26,7 @@ const InternationalFlight = () => {
         }
       ];
     return (
+      // home page right sec International Flight
         <div className="flex flex-wrap justify-center gap-3">
         {flights.map(flight => (
           <div key={flight.id} className="border rounded-lg p-4 shadow-md w-48">

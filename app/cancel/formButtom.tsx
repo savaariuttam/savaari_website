@@ -8,6 +8,7 @@ interface FormButtonProps {
 
 const FormButton: React.FC<FormButtonProps> = ({ selectedType }) => {
   return (
+    //* ........................................cancel page Passenger and route Details table ..................................
     <div className="full-cancel">
       <div className="box-one">
         {selectedType === "cancel_complete_trip" && (

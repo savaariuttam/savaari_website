@@ -4,7 +4,9 @@ import { FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
     return (
+        // ............................................footer sec start ..............................................
         <footer className="main-footer mt-5 border-t border-gray-300 bg-gray-50">
+            {/* .......................................footer 1st part start .......................................*/}
             <div className="footer_widgets relative py-12">
                 <div className="mx-4 md:mx-20">
                     <div className="flex flex-wrap gap-8 justify-between">
@@ -48,8 +50,8 @@ const Footer = () => {
                                 </a>
                             </h2>
                             <div className="social-list2 flex justify-center md:justify-start xl:justify-end sm:justify-start space-x-4">
-                                <a href="https://www.facebook.com/OnlineSavaari" className='w-8 h-8 leading-8 mr-1 mb-1 text-gray-700 border border-gray-700 rounded cursor-pointer inline-block text-center hover:text-red-600' 
-                                title="Facebook">
+                                <a href="https://www.facebook.com/OnlineSavaari" className='w-8 h-8 leading-8 mr-1 mb-1 text-gray-700 border border-gray-700 rounded cursor-pointer inline-block text-center hover:text-red-600'
+                                    title="Facebook">
                                     <FaFacebookF className="w-7 h-7" />
                                 </a>
                                 <a href="https://twitter.com/OnlineSavaari" className='w-8 h-8 leading-8 mr-1 mb-1 text-gray-700 border border-gray-700 rounded cursor-pointer inline-block text-center hover:text-red-600 hover:border-red-600' title="Twitter">
@@ -60,7 +62,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
+            {/* .......................................footer 1st part end .........................................*/}
+            {/* .......................................footer 2nd (all icon) part start ............................*/}
             <div className="more-info bg-gray-100 border-t border-b border-gray-300 py-5">
                 <div className="main-container mx-4 md:mx-20">
                     <div className="content flex flex-wrap justify-between items-center">
@@ -84,7 +87,8 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-
+            {/* .......................................footer 2nd (all icon) part end ..............................*/}
+            {/* .......................................footer 3rd (copyrights) part start ..........................*/}
             <div className="copyrights py-4 text-white">
                 <div className="main-container mx-4 md:mx-20">
                     <div className="flex flex-wrap justify-between items-center">
@@ -106,8 +110,9 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
+            {/* .......................................footer 3rd (copyrights) part end ..........................*/}
         </footer>
-
+        // ............................................footer sec end ..............................................
     );
 };
 

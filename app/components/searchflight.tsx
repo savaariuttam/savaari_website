@@ -41,6 +41,7 @@ const SearchFlight = ({ setResults}) => {
 
     return (
         <>
+        {/*................................... airport search ....................................................*/}
             <div id="twoWay" className="flight-input mt-4 flex justify-between gap-4">
                 <div className="flight-group border-b border-[#e4e4e4]">
                     <label className="text-xs leading-4 mb-1 text-gray-400 inline-block max-w-full font-normal"htmlFor="departFrom">Depart From</label>

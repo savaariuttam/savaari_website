@@ -3,6 +3,7 @@ import React from "react";
 
 const Loader = () => {
     return (
+        // main page loader
         <div className="loader">
             <div className="wait"></div>
             <div className="iata_code departure_city"></div>

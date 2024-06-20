@@ -28,8 +28,11 @@ function Leftscreen() {
         { label: 'Senior Citizen', value: 'SENIOR_CITIZEN', name: 'Special' },
     ];
     return (
+// .................................................home page left screen..............................................................................................................
+
         <div className="left-box min-w-80 box-one flex flex-row justify-center h-[calc(100vh-120px)] mt-[30px] ml-0 lg:ml-[70px] sm:ml-[0px] sticky top-[100px]">
             <form>
+        {/* .............................left screen route select start .....................................................................*/}
                 <h2 className="text-xl font-bold mb-4">Book Flights and Hotels</h2>
                 <div className="flex justify-start gap-4 mb-4">
 
@@ -43,13 +46,15 @@ function Leftscreen() {
                         </button>
                     ))}
                 </div>
-
+        {/* .............................left screen route select end .......................................................................*/}
+        {/* .............................left screen Depart From and Going To sec start .....................................................*/}
                 <SearchFlight setResults={setResults} />
                 <SearchResultList results={resultsDepartFrom} />
                 <SearchResultList results={resultsDepartTo} />
-
+        {/* .............................left screen Depart From and Going To sec end .......................................................*/}
                 <DateDiv type={tripType} />
                 <PersonSelect />
+        {/* ..............................flight category select start ......................................................................*/}
                 <ul className="filter-list bt_filter">
                     {filterOptions.map((filter) => (
                         <li key={filter.value}>
@@ -65,6 +70,8 @@ function Leftscreen() {
                         </li>
                     ))}
                 </ul>
+        {/* ..............................flight category select start ......................................................................*/}
+
                 <div className="text-right mt-4">
                     <Button href="/details" name="Search Flights" className='mt-2'/>
                 </div>
