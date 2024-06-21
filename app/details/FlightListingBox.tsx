@@ -121,10 +121,12 @@ const FlightListingBox = () => {
 
     return (
         <>
+        {/*......................................... all search flight show here ........................................................*/}
             <div className="flex justify-between items-center mb-4">
                 <button onClick={handleOpenFilter} className="px-4 py-2 bg-red-500 text-white rounded">
                     Open Filters
                 </button>
+                {/*................................ filter items show in search flight page start................................*/}
                 <div className="selected-airlines flex justify-between items-center mb-4 gap-2">
                     {selectedAirlines.length > 0 && (
                         <>
@@ -157,11 +159,13 @@ const FlightListingBox = () => {
                         </>
                     )}
                 </div>
+                {/*.................................filter items show in search flight page end......................................*/}
             </div>
             {showMoreFilter && <MoreFilter handleAirlineSelection={handleAirlineSelection} handleStopSelection={handleStopSelection} handleTimeSelection={handleTimeSelection} handleClose={handleClose} />}
 
             {filteredFlights.length > 0 ? (
                 filteredFlights.map(flight => (
+                // .............................all searching flight show start.................................................................
                     <div className="listing-box box-one" key={flight.id}>
                         <div className="basic-info">
                             <div className="basic-info">
@@ -214,8 +218,10 @@ const FlightListingBox = () => {
                         </div>
                         {openFaresId === flight.id && <ViewFares />}
                     </div>
+                // .............................all searching flight show end.................................................................
                 ))
             ) : (
+                // ............................if filterd item not available in the search flight show text..........................................
                 <div className="text-center font-bold text-red-600">No flights available based on selected filters.</div>
             )}
         </>

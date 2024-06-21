@@ -8,8 +8,10 @@ const FirstRow = () => {
     };
 
     return (
+    //........................................... top container first row (Depart From and Going To input)............................................................
         <div className="sm:w-full md:w-full lg:w-full w-full">
             <div className="flight-input">
+            {/*................................... Depart From start ....................................................................*/}
                 <div className="flight-group">
                     <label htmlFor="departFrom">Depart From</label>
                     <input
@@ -19,8 +21,11 @@ const FirstRow = () => {
                         className="text-white bg-transparent text-base p-0 border-none border-b border-white font-semibold outline-none"
                     />
                 </div>
+            {/*................................... Depart From end ....................................................................*/}
+            {/*................................... switch icon start..........................................................................*/}
                 <GoArrowSwitch style={{ width: '140px', height: '20px' }} />
-
+            {/*................................... switch icon end..........................................................................*/}
+            {/*................................... Going To start ....................................................................*/}
                 <div className="flight-group">
                     <label htmlFor="departTo">Going To</label>
                     <input
@@ -30,6 +35,7 @@ const FirstRow = () => {
                         className="text-white bg-transparent text-base p-0 border-none border-b border-white font-semibold outline-none"
                     />
                 </div>
+            {/*................................... Going To end ....................................................................*/}
             </div>
         </div>
     );

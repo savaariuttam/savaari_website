@@ -5,6 +5,7 @@ const ProfileLeft = () => {
 
     return (
         <>
+        {/*........................................ Dashboard table.......................................... */}
             <div className=" left-sec pr-4 pl-4">
                 <div className="w-full pr-8 pl-8 flex flex-col xl:justify-end md:justify-center sm:justify-center">
                     <ul className="breadcumb">

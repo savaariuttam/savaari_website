@@ -2,6 +2,7 @@ import React from 'react'
 
 const ProfileRight = () => {
     return (
+        //......................................... savaari user profile Right sec.................................................
         <div className="pr-4 pl-4 right-sec sm:w-full md:1/2 lg:w-1/2">
             <div className="block text-gray-800 bg-white border border-gray-200 rounded-lg shadow-md p-5 overflow-hidden profile-box">
                 <div className="title-sec mb-7 flex flex-wrap items-center justify-between">

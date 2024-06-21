@@ -4,6 +4,7 @@ import ButtonComponent from "./Button";
 const MainDashboard = () => {
   return (
     <>
+    {/*......................................... savaari Dashboard ..............................................*/}
       <section className="user-pg mt-20">
         <div className="container mx-auto sm:px-4 px-4">
           <div className="flex flex-wrap">
@@ -13,6 +14,7 @@ const MainDashboard = () => {
               </div>
             </div>
           </div>
+          {/*................................... Dashboard Box content start ....................................*/}
           <div className="flex flex-wrap justify-center">
             <DashboardBox
               headingname="Modify Booking"
@@ -65,6 +67,7 @@ const MainDashboard = () => {
               btn={<ButtonComponent />}
             />
           </div>
+          {/*................................... Dashboard Box content end ....................................*/}
         </div>
       </section>
     </>

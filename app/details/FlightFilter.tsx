@@ -3,6 +3,7 @@ import React from 'react';
 const FlightFilter = () => {
     return (
         <>
+        {/*................................................ flight filter sec ..............................................*/}
             <div className="filter-box">
                 <div className="sort-label">Sort By:</div>
                 <div className="sort-nav flex gap-20">

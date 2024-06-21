@@ -2,6 +2,7 @@ import React from 'react';
 
 const FourRow = () => {
     return (
+        //................................... four row (flight type).........................................................
         <div className="sm:w-full md:w-full lg:w-full w-full">
             <ul className="filter-list">
                 <li>

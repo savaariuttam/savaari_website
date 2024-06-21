@@ -6,6 +6,7 @@ import CreditTable from './CreditTable';
 const Transaction = () => {
     const [activeTab, setActiveTab] = useState('wallet');
     return (
+        //....................................... mid page All Transaction page...................................
         <div className="mt-6">
             <div className="w-full bg-white shadow rounded-md p-4">
                 <h2 className="text-xl font-semibold mb-4">All Transaction</h2>
@@ -41,6 +42,7 @@ const Transaction = () => {
                     </button>
                 </div>
             </div>
+            {/* showw table  */}
             {activeTab === 'wallet' ? <WalletTable /> : <CreditTable />}
         </div>
     );

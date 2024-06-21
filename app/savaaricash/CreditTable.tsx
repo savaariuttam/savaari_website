@@ -2,6 +2,7 @@ import React from 'react'
 
 const CreditTable = () => {
     return (
+        //........................................ savaari Credit Table.............................
         <div className="overflow-x-auto">
             <table className="min-w-full bg-white">
                 <thead>

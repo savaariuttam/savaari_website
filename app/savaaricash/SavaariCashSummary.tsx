@@ -4,6 +4,7 @@ import Transaction from './Transaction'
 const SavaariCashSummary = () => {
     return (
         <>
+        {/*........................................ top page View Savaari Cash Summary page .....................................................*/}
             <div className="mx-auto p-4 bg-white shadow rounded-md box-one xl:w-1/2 lg:w-3/5 md:w-3/4 sm:w-5/6 flex justify-start">
                 <h2 className="text-xl font-semibold mb-4">View Savaari Cash Summary</h2>
                 <div className="grid grid-cols-2 gap-4">
@@ -23,6 +24,7 @@ const SavaariCashSummary = () => {
                         </p>
                     </div>
                 </div>
+                {/* all savaari Transaction */}
                 <Transaction />
             </div>
 

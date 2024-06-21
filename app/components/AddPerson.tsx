@@ -7,6 +7,7 @@ const AddPerson = ({ type, count, onChange, min, max }) => {
     };
 
     return (
+        //.................................Traveller Add Person.................................................
         <div className="person-box w-1/3">
             <span className='block text-sm'>{type}</span>
             <div className="quantity-box flex">

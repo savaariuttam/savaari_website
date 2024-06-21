@@ -1,3 +1,4 @@
+import Button from '../components/UI/Button';
 import React, { useState } from 'react';
 import { AiOutlineClose } from "react-icons/ai";
 import { FaCloudSun } from "react-icons/fa";
@@ -38,15 +39,19 @@ const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, 
     };
 
     return (
+        //............................................... more filter sec.....................................................
         <div className="fixed inset-0 bg-gray-900 bg-opacity-50 flex justify-end z-50 h-full">
             <div className="bg-white p-6 rounded-lg shadow-lg w-96 max-w-lg">
+                {/*...................................... filter top sec ...............................................*/}
                 <div className="flex justify-between items-center mb-4">
                     <h2 className="text-lg font-semibold">Filters</h2>
                     <button onClick={handleClose}>
                         <AiOutlineClose className="w-6 h-6 text-gray-600" />
                     </button>
                 </div>
+                {/*...................................... filter mid sec ...............................................*/}
                 <div className="space-y-4">
+                    {/* filter Stops */}
                     <div>
                         <label className="block text-sm font-medium text-gray-600">Stops:</label>
                         <div className="flex space-x-2 mt-1">
@@ -61,6 +66,7 @@ const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, 
                             ))}
                         </div>
                     </div>
+                    {/* filter price range */}
                     <div>
                         <label className="block text-sm font-medium">Price:</label>
                         <div className="mt-1">
@@ -81,6 +87,7 @@ const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, 
                             </div>
                         </div>
                     </div>
+                    {/* filter timing */}
                     <div>
                         <label className="block text-sm font-medium text-gray-600">Depart Time:</label>
                         <div className="flex space-x-2 mt-1 w-full">
@@ -116,6 +123,7 @@ const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, 
                             })}
                         </div>
                     </div>
+                    {/* filter airline name */}
                     <div>
                         <label className="block text-sm font-medium text-gray-600">Airlines:</label>
                         <div className="space-y-1 mt-1">
@@ -134,9 +142,12 @@ const MoreFilter = ({ handleClose, handleAirlineSelection, handleStopSelection, 
                         </div>
                     </div>
                 </div>
+                 {/*.................................... apply and cancel button ............................................*/}
                 <div className="mt-20 flex justify-center">
                     {/* <button className="px-4 py-2 border rounded" onClick={handleClose}>Cancel</button> */}
-                    <button className="px-4 py-2 w-96 bg-red-500 text-white rounded" onClick={handleClose}>Apply Filter</button>
+                    {/* <button className="px-4 py-2 w-96 bg-red-500 text-white rounded" onClick={handleClose}>Apply Filter</button> */}
+                    {/* <Button name="Cancel" href="" className="w-48 rounded" onClick={handleClose}/> */}
+                    <Button name="Apply Filter" href="" className="w-48 rounded" onClick={handleClose}/>
                 </div>
             </div>
         </div>

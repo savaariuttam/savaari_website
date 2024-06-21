@@ -13,6 +13,7 @@ const LoginSignupPage = () => {
         setIsLoginActive(!isLoginActive);
     };
     return (
+        //................................................. login left side.....................................................
         <section className="login-pg">
             <div className="login-box box-one">
                 <div className="flex flex-col md:flex-row">

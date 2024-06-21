@@ -31,6 +31,7 @@ const DashboardBox: FC<DashboardBoxProps> = ({
   const hasLitext3 = litext3 && litext3.trim() !== "";
 
   return (
+    // ..........................................create dashboard box..............................................
     <div className="lg:w-1/4 pr-4 pl-4 md:w-1/2">
       <div className="dashboard-box custom-bg border custom-border rounded-md shadow-sm overflow-hidden mb-8">
         <div className="head-sec p-2.5 bg-[#333333] text-[#fff]">

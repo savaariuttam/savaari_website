@@ -7,6 +7,7 @@ const SavaariOffers = () => {
     const menuItems = ["Domestic Hotels", "International Hotels", "Hotels"];
     return (
         <>
+        {/*................................. savaari all offers ...........................*/}
             <OffersHeader />
             <div className="offer-pg lg:mx-40 md:mx-32">
                 <ul className="menu-list flex overflow-x-auto flex-nowrap">

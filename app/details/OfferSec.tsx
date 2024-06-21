@@ -3,6 +3,7 @@ import React from 'react';
 const OfferSec = () => {
     return (
         <>
+        {/*..................................... savaari offers sec...................................... */}
             <div className="offer-sec w-full">
                 <div className="box-one listing-promo">
                     <div className="title-sec">

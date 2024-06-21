@@ -4,6 +4,7 @@ import React from 'react';
 
 const ViewFares = () => {
   return (
+    //................................................... View Fares of flight......................................................
     <div className="container mx-auto mt-10">
       <div className="overflow-x-auto">
         <table className="min-w-full bg-white border border-gray-300">

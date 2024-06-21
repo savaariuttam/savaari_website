@@ -93,6 +93,7 @@ const OffersCard = () => {
     ];
 
     return (
+        //..................................... savaari Offers Card create..................................................
         <div className="flex flex-wrap lg:mx-40 md:mx-32">
             {OfferSec.map((offer) => (
                 <div key={offer.id} className="lg:w-1/3 md:w-1/2 w-full px-4 mb-6 min-w-48">

@@ -15,6 +15,7 @@ const PopUpBox = ({ isOpen, onClose }) => {
     if (!isOpen) return null;
 
     return (
+        //............................................ create Reschedule Query.........................................................
         <div className="modal-dialog popup-overlay fixed top-0 left-0 w-full h-full bg-black bg-opacity-50 flex justify-center items-center z-50" role="document">
             <div className="modal-content popup bg-white p-10 md:p-16 rounded-lg animate-fade-in-up min-w-min">
                 <div className="modal-header flex items-start justify-between p-4 border-b border-gray-300 rounded-t-lg" id="loginModalLabel">

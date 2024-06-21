@@ -5,11 +5,13 @@ const LoginElement = () => {
   const router = useRouter();
   return (
     <>
-      <form id="login-id" action="/custlogin" method="POST">
+    {/*.................................................... login page ............................................... */}
+      <form id="login-id">
         <div className="heading-one">
           <h3>Welcome to Online Savaari!</h3>
           <p>Enter your login details to continue</p>
         </div>
+        {/* loin content start */}
         <div className="form-content">
           <Input
             label="Username / Email / Mobile No."
@@ -47,6 +49,7 @@ const LoginElement = () => {
             </a>
           </div>
         </div>
+        {/* loin content start */}
         <p className="text-center">OR</p>
       </form>
       <div className="form-group">
