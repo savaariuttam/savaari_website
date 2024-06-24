@@ -11,7 +11,7 @@ const page = () => {
             <Header />
             <main className="flex flex-col lg:flex-row mt-28 gap-20">
                 {/*................................. get payment left side ........................................... */}
-                <div className="w-1/2 lg:w-2/3 flex justify-end">
+                <div className="w-1/2 lg:w-2/3 flex justify-start">
                     <PaymentMethod />
                 </div>
                 {/*................................. get payment right side ........................................... */}

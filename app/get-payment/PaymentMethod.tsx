@@ -12,7 +12,7 @@ const PaymentMethod = () => {
         <>
             {/*................................. get payment left side (Payment Method select)........................................... */}
 
-            <div className="w-5/6">
+            <div className="lg:w-5/6 w-full">
                 <h2 className="text-xl font-semibold text-[#ea2330] flex items-center">
                     <MdPayments className="mr-2" />
                     Payment Method None
