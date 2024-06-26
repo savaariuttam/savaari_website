@@ -7,19 +7,20 @@ import PaymentDetails from './PaymentDetails'
 const page = () => {
     return (
         <>
-        {/*......................................... get-payment page  ...............................................*/}
+            {/*......................................... get-payment page  ...............................................*/}
             <Header />
-            <main className="flex flex-col lg:flex-row mt-28 gap-20">
+            <main className="flex flex-col lg:flex-row mt-28 gap-10">
                 {/*................................. get payment left side ........................................... */}
-                <div className="w-1/2 lg:w-2/3 flex justify-start">
+                <div className="lg:w-2/3 flex justify-center lg:justify-end">
                     <PaymentMethod />
                 </div>
                 {/*................................. get payment right side ........................................... */}
-                <div className="w-1/2 lg:w-1/3 flex justify-start">
+                <div className="lg:w-1/3 flex justify-center lg:justify-start">
                     <PaymentDetails />
                 </div>
             </main>
             <Footer />
+
         </>
     )
 }

@@ -4,7 +4,7 @@ const PaymentDetails = () => {
     return (
         <>
         {/*................................. get-payment page right side (payment details ) ......................................*/}
-            <div className="box-one w-3/4">
+            <div className="box-one w-3/4 min-w-72">
                 <div>
                     <h2 className="text-xl font-semibold">Payment Details</h2>
                     <div className="bg-gray-100 p-4 rounded-md mt-2">
