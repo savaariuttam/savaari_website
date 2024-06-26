@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { MdPayments } from "react-icons/md";
 import UpiPaymentOptions from './UpiPaymentOptions';
+import Button from '../components/UI/Button';
 
 const PaymentMethod = () => {
     const [selectedTab, setSelectedTab] = useState('UPI');
@@ -14,7 +15,7 @@ const PaymentMethod = () => {
             case 'UPI':
                 return (
                     <UpiPaymentOptions />
-                    
+
                 );
             case 'Wallet':
                 return (
@@ -105,8 +106,15 @@ const PaymentMethod = () => {
                             By clicking on Pay Now, you are agreeing to our Terms & Conditions, Privacy policy.
                         </p>
                     </div>
-                    <div className="mt-4 text-2xl font-bold text-gray-700">
-                        ₹ 4222.0
+                    <div className='flex justify-between'>
+                        <div className="mt-4 text-2xl font-bold text-gray-700">
+                            ₹ 4222.0
+                        </div>
+                        {acceptedTerms && (
+                            <div className='animate-fadeIn duration-800'>
+                                <Button name="Pay Now" href=""/>
+                            </div>
+                        )}
                     </div>
                 </div>
             </div>

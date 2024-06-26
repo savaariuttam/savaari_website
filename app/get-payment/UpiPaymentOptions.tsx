@@ -31,7 +31,7 @@ const UpiPaymentOptions = () => {
                 ))}
             </div>
             <div className="flex justify-start text-sm mt-10">
-                Selected Payment Option: <span className='text-[#ea2330]'> {selectedStep}</span>
+                <span className='text-xl font-semibold text-[#ea2330]'> {selectedStep}</span>
             </div>
         </>
     );

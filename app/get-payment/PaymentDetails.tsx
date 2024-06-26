@@ -38,9 +38,9 @@ const PaymentDetails = () => {
                     <h2 className="text-xl font-semibold">Contact Details</h2>
                     <div className="bg-gray-100 p-4 rounded-md mt-2 relative">
                         <button className="absolute top-2 right-2 bg-white border rounded-md px-2 py-1 text-gray-500">Edit</button>
-                        <div className="mb-2 font-bold">1. Mrs ut tam</div>
-                        <div className="text-gray-500">Email: ghoshanupam001@gmail.com</div>
-                        <div className="text-gray-500">Phone: +91-9002354116</div>
+                        <div className="mb-2 font-bold">1. Mr uttam</div>
+                        <div className="text-gray-500">Email: test@gmail.com</div>
+                        <div className="text-gray-500">Phone: +91-9000004116</div>
                     </div>
                 </div>
             </div>
